@@ -106,6 +106,8 @@
         cache: false,
         success: function (data) {
           comments.replaceAll(data);
+          commentBox.render();
+          dc.clean();
         },
         error: function (xhr, status, err) {
           console.error(url, status, err.toString());
