@@ -87,8 +87,7 @@
           data: newComment,
           success: function (data) {
             comments.replaceAll(data);
-            commentBox.render();
-            dc.clean();
+            dc.render();
           },
           error: function (xhr, status, err) {
             console.error(url, status, err.toString());
@@ -106,8 +105,7 @@
         cache: false,
         success: function (data) {
           comments.replaceAll(data);
-          commentBox.render();
-          dc.clean();
+          dc.render();
         },
         error: function (xhr, status, err) {
           console.error(url, status, err.toString());
